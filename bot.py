@@ -1,9 +1,10 @@
+import os
 import discord
 from discord.ext import commands
 from discord.ui import View, Button, Modal, TextInput
 import pyotp
 
-TOKEN = "MTUwMTk1NDU0NDIxOTg0ODc5NA.GYbdGf.sdPlyCxDxAb-7JuxPVcdvonuPe1QE1s9H0MlGU"
+TOKEN = os.getenv("TOKEN")
 
 CANAL_ID = 1501956404750192723
 
