@@ -7,6 +7,7 @@ import pyotp
 TOKEN = os.getenv("TOKEN")
 
 CANAL_ID = 1501956404750192723
+VOICE_CHANNEL_ID = 1501974133268025585
 
 intents = discord.Intents.all()
 
@@ -79,5 +80,10 @@ async def on_ready():
             embed=embed,
             view=PanelView()
         )
+
+    voice_channel = bot.get_channel(VOICE_CHANNEL_ID)
+
+    if voice_channel:
+        await voice_channel.connect()
 
 bot.run(TOKEN)
